@@ -1,0 +1,13 @@
+<div class="container"  >
+  <div class="col w-50 mx-auto" >
+    <h1 >Ingrediente</h1>
+<div class="border d-flex justify-content-center" *ngFor="let ingridient of ingridients">
+  <label>{{ingridient.name}}</label>
+  <input class="w-25" [(ngModel)]="ingridient.amount">
+</div>
+  </div>
+  <div class="row ">
+    <button class="btn btn-outline-danger w-50 mx-auto" routerLink="/kitchen">Bucatarie</button>
+  </div>
+</div>
+

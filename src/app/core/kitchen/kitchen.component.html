@@ -1,0 +1,20 @@
+<div class="continer">
+  <div class="col w-50 mx-auto" >
+    <h1>Preparate</h1>
+  <div class="border d-flex justify-content-center">
+  <div  *ngFor="let recipe of recipes">
+    <label>{{recipe.name}}-{{recipe.amount}}</label>
+  </div>
+  </div>
+  </div>
+  <div class="col border w-75 mx-auto" *ngFor="let recipe of recipes">
+    <strong class="mr-2">{{recipe.name}}</strong>
+    <label>Ingrediente</label>
+    <label *ngFor="let ingridient of recipe.neededIngredients" class="mr-2">{{ingridient.name}}({{ingridient.amount}})</label>
+    <button class="btn btn-outline-primary " (click)="bakeRecipe(recipe)">Gateste</button>
+  </div>
+  <div class="row ">
+    <button class="btn btn-outline-success w-75 mx-auto " routerLink="/deposit">Deposit</button>
+  </div>
+</div>
+
